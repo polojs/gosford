@@ -1,0 +1,106 @@
+<main class="main home-page skeleton-body">
+    <div class="intro-slider-container mb-0">
+        <owl-carousel carouselClasses="intro-slider owl-theme owl-nav-inside owl-light" [options]="introSlider">
+            <div class="intro-slide" style="background-image: url('assets/images/farm/farm_house.jpg');">
+                <div class="container intro-content text-center" contentAnim aniName="fadeInUpShorter">
+                    <h3 class="intro-subtitle text-white">Welcome to</h3>
+                    <h1 class="intro-title text-white">little gosford farm shop</h1>
+
+                    <a routerLink="/shop" class="btn btn-outline-white-4">
+                        <span>Discover More</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="intro-slide" style="background-image: url('assets/images/farm/farm_templ.jpg')">
+                <div class="container intro-content text-center" contentAnim aniName="fadeInUpShorter">
+                    <h3 class="intro-subtitle text-white"></h3>
+                    <h1 class="intro-title text-white">sample text</h1>
+
+                    <a routerLink="/shop" class="btn btn-outline-white-4">
+                        <span>Discover More</span>
+                    </a>
+                </div>
+            </div>
+        </owl-carousel>
+    </div>
+
+    <div class="pt-2 pb-3 first-section">
+        <div class="container" style="margin-top: 5px;">
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="banner">
+                        <a href="javascript:;">
+                            <molla-image src="assets/images/farm/sustainable.avif" style="filter:brightness(80%)" alt="Banner" width="370"
+                                height="550"></molla-image>
+                        </a>
+
+                        <div class="banner-content">
+                            <h3 class="banner-title text-white">Green & <br>Sustainable</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 order-lg-last">
+                    <div class="banner">
+                        <a href="javascript:;">
+                            <molla-image src="assets/images/farm/bread.jpg" style="filter:brightness(80%)" alt="Banner" width="370"
+                                height="550"></molla-image>
+                        </a>
+
+                        <div class="banner-content">
+                            <h3 class="banner-title text-white">Sourdough</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="banner">
+                                <a href="javascript:;">
+                                    <molla-image src="assets/images/farm/caravan.jpg" style="filter:brightness(80%)" alt="Banner"
+                                        width="370" height="265"></molla-image>
+                                </a>
+
+                                <div class="banner-content">
+                                    <h3 class="banner-title text-white">Caravan <br>Park.</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-12" (click)="changeRoute('bungalow')" style="cursor: pointer;">
+                            <div class="banner">
+                                <a href="javascript:;">
+                                    <molla-image src="assets/images/farm/bungalow.jpg" style="filter:brightness(80%); filter: blur(1px);" alt="Banner"
+                                        width="370" height="265"></molla-image>
+                                </a>
+                                <div class="banner-content">
+                                    <h3 class="banner-title text-white">Holiday <br>Bungalow</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="mb-3"></div>
+        </div>
+    </div>
+    <molla-top-collection [products]="products" [loaded]="loaded"></molla-top-collection>
+    <div id="content">
+        <video autoplay playsinline muted loop src="../../../../assets/images/farm/topdown.mp4"></video>
+        <div class="overlay" contentAnim aniName="fadeInUpShorter">
+            <h3 class="h1 text-white"><span>little</span><strong>Gosford Farm</strong></h3>
+        </div>
+      </div>
+
+    <div class="mb-5"></div>
+    
+
+    <molla-blog-collection [posts]="posts" [loaded]="loaded"></molla-blog-collection>
+
+    <div class="mb-2"></div>
+
+
+</main>

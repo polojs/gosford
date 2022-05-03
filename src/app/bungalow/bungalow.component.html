@@ -1,0 +1,140 @@
+<div class="main">
+    <nav class="breadcrumb-nav border-0 mb-0">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a routerLink="/">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Holiday Bungalow</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- <div class="container">
+        <div class="page-header page-header-big text-center"
+            style="background-image: url('assets/images/farm/bungalow.jpg')">
+            <h1 class="page-title text-white">Holiday Bungalow</h1>
+        </div>
+    </div> -->
+    <div class="container" id="content">
+        <video autoplay playsinline muted loop src="../../../../assets/images/farm/bungalow.MP4"></video>
+        <div class="overlay" contentAnim aniName="fadeInUpShorter">
+            <h1 class="page-title text-white">Holiday Bungalow</h1>
+        </div>
+      </div>
+    
+
+    <div class="page-content pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <h2 class="title">Description</h2>
+                    <p>This single storey property offers comfortable accommodation for four guests, who will immediately be able to make themselves at home, as soon as they enter the open-plan lounge/kitchen/diner. This light filled space has comfortable sofa seating at one end of the room, with patio doors which lead out onto the patio, a TV and DVD. Behind this area, the dining area has a table seating four, beyond which is the spacious kitchen area with its electric oven and hob, microwave,  fridge/freezer and washing machine. The property has two bedrooms, the first of which is a light and airy double room which enjoys countryside views, whilst the second bedroom is a cosy twin room. There is also a shower room with WC.
+                        <br><br>
+                        Outside, the property benefits from a fully enclosed patio, where guests will find a BBQ and garden furniture. This provides a fantastic place to sit and enjoy the peaceful surroundings and gaze over the fields where sheep and chicken roam. In fact, guests who would like to participate in farm life are able to make arrangements with the friendly owner, and help to collect eggs and to feed the resident lambs, depending on the season. There is ample off-road parking provided.</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <h2 class="title">Booking & Surroundings</h2>
+                    <p>The town of Ottery St Mary, on the outskirts of which this property is located, enjoys a fantastic location surrounded by countryside, and yet just a fifteen minute drive from the city of Exeter. ‘Ottery’ itself offers a range of independent shops, and a choice of eateries which pride themselves on serving the best of local produce. It is also quite unique, in that it still celebrates a number of traditional festivals, including Pixie day in June, and the Tar Barrells festival in November, where local men run through the town’s streets carrying flaming barrels of tar. The area surrounding the town has much to offer holiday makers, including the beach at Sidmouth, Wildwood Wildlife Park at Escot House, and Crealy Adventure Park.</p>
+                    <br>
+                    <p>You can book our holiday let “The Lambing Shed” on the website of Holiday Cottages:
+                       
+                        <br> <a href="https://www.holidaycottages.co.uk/devon/mid-and-east-devon/the-lambing-shed"> Booking Website</a> </p>
+                    </div>
+            </div>
+
+            <div class="mb-5"></div>
+        </div>
+
+        <div class="banner-group">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-sm-6" contentAnim aniName="fadeInDownShorter">
+                                <div class="banner banner-overlay">
+
+                                        <molla-image src="assets/images/farm/lambs.jpg" alt="Banner" fixedPt="25rem" style="background-color: #262d33"></molla-image>
+
+    
+                                </div>
+                            </div>
+    
+                            <div class="col-sm-6" contentAnim aniName="fadeInDownShorter">
+                                <div class="banner banner-overlay banner-overlay-light">
+
+                                        <molla-image src="assets/images/farm/livingroom.jpg" alt="Banner" fixedPt="25rem" style="background-color: #e6e6e6;"></molla-image>
+
+
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="banner banner-large banner-overlay d-none d-sm-block" contentAnim aniName="fadeInUpShorter">
+
+                                <molla-image src="assets/images/farm/view.jpg" alt="Banner" fixedPt="25rem" style="background-color: #ed9476;"></molla-image>
+    
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-4 d-sm-none d-lg-block" contentAnim aniName="fadeInLeftShorter">
+                        <div class="banner banner-middle banner-overlay">
+
+                                <molla-image src="assets/images/farm/betterview.jpg" alt="Banner" fixedPt="52rem" style="background-color: #a0a5a9;"></molla-image>
+
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mb-2"></div>
+
+        <div class="about-testimonials bg-light-2 pt-6 pb-6" style="margin-bottom: -1px;">
+            <div class="container">
+                <h2 class="title text-center mb-3">What Customer Say About Us</h2>
+
+                <owl-carousel [carouselClasses]="'owl-simple owl-testimonials-photo'" [options]='sliderOption'>
+                    <blockquote class="testimonial text-center" *ngFor="let custom of customSay">
+                        <img [src]="custom.photo" width="70" height="70" alt="user">
+                        <p>{{custom.comment}}</p>
+                        <cite>
+                            {{custom.name}}
+                            <span>{{custom.type}}</span>
+                        </cite>
+                    </blockquote>
+                </owl-carousel>
+            </div>
+        </div>
+
+<!-- <div class="bg-light-2 pt-6 pb-5 mb-6 mb-lg-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 mb-3 mb-lg-0">
+                        <h2 class="title">Who We Are</h2>
+                        <p class="lead text-primary mb-3">Pellentesque odio nisi, euismod pharetra a ultricies <br>in
+                            diam. Sed arcu. Cras consequat</p>
+                        <p class="mb-2">Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                            eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas, ante et vulputate
+                            volutpat, uctus metus libero eu augue. </p>
+
+                        <a routerLink="/blog/classic" class="btn btn-sm btn-minwidth btn-outline-primary-2">
+                            <span>VIEW OUR NEWS</span>
+                            <i class="icon-long-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="about-images">
+                            <img src="assets/images/about/img-1.jpg" alt="About" class="about-img-front" />
+                            <img src="assets/images/about/img-2.jpg" alt="About" class="about-img-back" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>

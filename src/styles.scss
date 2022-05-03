@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import './scss/plugins/owl-carousel/owl.carousel.scss';
+@import './scss/style.scss';
+
+body {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+
+.ngb-dp-day {
+    width: 4.7rem !important;
+    height: 4.7rem !important;
+}
+
+.ngb-dp-day>div {
+    width: 4.7rem !important;
+    height: 4.7rem !important;
+    line-height: 4.7rem !important;
+}
+
+.ngb-dp-weekday {
+    width: 4.7rem !important;
+}
+
+ngb-datepicker-navigation-select>.custom-select {
+    flex: 1 1 auto;
+    padding: 0 0.5rem;
+    font-size: 1.875rem !important;
+    height: 3.85rem !important;
+}
+
+.ngb-timepicker {
+    font-size: 1rem !important;
+}
+
+.ngb-tp-input {
+    padding: 0 0 !important;
+    font-size: 2rem !important;
+}

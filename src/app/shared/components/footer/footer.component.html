@@ -1,0 +1,64 @@
+<footer class="footer">
+    <div class="footer-middle">
+        <div [ngClass]="containerClass">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="widget widget-about">
+                        <h4 class="widget-title">about gosford farm</h4>
+                        <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. </p>
+
+                        <div class="social-icons">
+                            <a href="javascript:;" class="social-icon" title="Facebook"><i class="icon-facebook-f"></i></a>
+                            <a href="javascript:;" class="social-icon" title="Twitter"><i class="icon-twitter"></i></a>
+                            <a href="javascript:;" class="social-icon" title="Youtube"><i class="icon-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title">Useful Links</h4>
+
+                        <ul class="widget-list">
+                            <li><a routerLink="/pages/about">About Gosford Farm</a></li>
+                            <li><a routerLink="/pages/faq">FAQ</a></li>
+                            <li><a routerLink="/pages/contact">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title">Customer Service</h4>
+
+                        <ul class="widget-list">
+                            <li><a href="javascript:;">Payment Methods</a></li>
+                            <li><a href="javascript:;">Terms and conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title">My Account</h4>
+
+                        <ul class="widget-list">
+                            <li><a routerLink="/shop/cart">View Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div [ngClass]="containerClass">
+            <a routerLink="/">
+                <img src="assets/images/farm/logo.png" alt="Molla Logo" width="82" height="25">
+            </a>
+            <p class="footer-copyright">Copyright © {{ year }} little Gosford Farm. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <div class="mb-10" *ngIf="isBottomSticky"></div>
+</footer>
