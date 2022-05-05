@@ -106,7 +106,7 @@ export class ApiService {
 			temp += '&perPage=' + perPage;
 		}
 		console.log(temp, "temp");
-		return this.http.get(`${environment.SERVER_URL}/blogs`);
+		return this.http.get(`http://localhost:1337/blogs`);
 	}
 
 	/**
@@ -121,11 +121,15 @@ export class ApiService {
 	 * Get Products for home page
 	 */
 	public fetchHomeData(): Observable<any> {
-		return this.http.get(`${environment.SERVER_URL}/${environment.demo}`);
+		return this.http.get(`http://localhost:1337/${environment.demo}`);
 	}
 
 	public fetchProducts(): Observable<any> {
 		return this.http.get(`${environment.SERVER_URL}/api/products?populate=pictures,sm_pictures`)
+	}
+
+	public fetchBlogs(): Observable<any> {
+		return this.http.get(`${environment.SERVER_URL}/api/blogs?populate=image`)
 	}
 
 	public getProductBySlug(slug, isQuickView = false): Observable<any>{

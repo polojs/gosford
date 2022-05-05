@@ -1,7 +1,7 @@
 <article class="entry entry-display">
     <figure class="entry-media banner-overlay overlay-dark mb-2" [style.padding-top]="paddingTop">
         <a [routerLink]="['/blog/single/default/' + post.slug]">
-            <molla-image [src]="SERVER_URL + post.image[0].url" alt="image desc" [fixedPt]="paddingTop"></molla-image>
+            <molla-image [src]="SERVER_URL + post.image.url" alt="image desc" [fixedPt]="paddingTop"></molla-image>
         </a>
     </figure>
 

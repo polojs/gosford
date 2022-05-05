@@ -7,6 +7,7 @@ import { IndexComponent } from './pages/home/index/index.component';
 import { BungalowComponent } from './bungalow/bungalow.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './pages/others/page-not-found/page-not-found.component';
+import { CaravanComponent } from './caravan/caravan.component';
 
 const routes: Routes = [
 	{
@@ -26,6 +27,11 @@ const routes: Routes = [
 				path: 'bungalow',
 				pathMatch: 'full',
 				component: BungalowComponent
+			},
+			{
+				path: 'caravan',
+				pathMatch: 'full',
+				component: CaravanComponent
 			},
 			{
 				path: 'contact',

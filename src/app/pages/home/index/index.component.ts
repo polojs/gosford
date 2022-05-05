@@ -37,8 +37,32 @@ export class IndexComponent implements OnInit {
 			this.loaded = true
 		})
 
+		let arr = [] 
+
+		this.apiService.fetchBlogs().subscribe(result => {
+			result = this.apiService.flattenObj(result)
+			for (const el of result){
+				el.type = "classic"
+				el.page = null
+				let parts = el.date.split('-')
+				el.dateObj = new Date(parts[0], parts[1], parts[2]);
+			}
+			console.log(result, "before");
+			let dateArr = []
+
+			const test = new Date(Math.max(...result.map(element => element.dateObj)))
+
+			let latest = result.filter(element => {
+				if(element.dateObj.toString() == test.toString()) return element})
+			
+			latest = [latest[0]]
+
+			this.posts = latest
+			console.log(this.posts, "posts");
+		})
+
 		// this.apiService.fetchHomeData().subscribe(result => {
-		// 	// this.products = result.products;
+		// 	this.products = result.products;
 		// 	this.dealProducts = utilsService.attrFilter(result.products, 'until').slice(0, 2);
 		// 	this.newProducts = result.products.slice(0, 8);
 		// 	console.log(result.blogs, "all blogs");

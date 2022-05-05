@@ -114,10 +114,11 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 	handleBuy = async () => {
 		const obj = {user: this.info, product: [], date: this.model, selfPickup: this.selfPickup}
 		for(const product of this.cartItems){
-			obj.product.push({id: product.id, qty: product.qty})
+			console.log(product, "product");
+			obj.product.push({id: product.slug, qty: product.qty})
 		}
 		const stripe = await stripePromise
-		const res = await fetch(`${environment.SERVER_URL}/orders`, {
+		const res = await fetch(`${environment.SERVER_URL}/api/orders`, {
 			method: 'POST',
 			body: JSON.stringify(obj)
 		})

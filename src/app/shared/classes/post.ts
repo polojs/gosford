@@ -11,9 +11,5 @@ export interface Post {
         name: string;
         slug: string;
     }>
-    image: Array<{
-        width: string;
-        height: string;
-        url: string;
-    }>
+    image: any
 }

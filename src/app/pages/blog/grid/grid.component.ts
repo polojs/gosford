@@ -62,26 +62,44 @@ export class GridPageComponent implements OnInit {
 		this.postsAmount = getPostsAmount[this.gridType];
 		this.itemsPerRow = itemsPerRowOption[this.gridType];
 		this.loaded = false;
-
-		this.apiService.fetchBlogData(this.params, 'blogs/' + this.gridType, this.postsAmount).subscribe(result => {
-			this.posts = result;
-			// this.blogCategories = result.categories;
-			console.log(result, "posts");
+		this.apiService.fetchBlogs().subscribe(data => {
+			data = this.apiService.flattenObj(data)
+			this.posts = data
 			this.counts = [];
 			this.counts.push(this.posts.length);
 
 			this.blogCategories.map((item, index) => {
 				this.counts.push(item.count);
 			});
-
 			if (!this.firstLoad) {
 				this.firstLoad = true;
 			}
-
-			this.totalCount = result.totalCount;
+			// this.totalCount = data.totalCount;
 			this.loaded = true;
 
 			this.utilsService.scrollToPageContent();
+		})
+		this.apiService.fetchBlogData(this.params, 'blogs/' + this.gridType, this.postsAmount).subscribe(result => {
+			// this.posts = result;
+			// console.log(this.posts);
+			// console.log("getting exe");
+			// // this.blogCategories = result.categories;
+			// console.log(result, "posts");
+			// this.counts = [];
+			// this.counts.push(this.posts.length);
+
+			// this.blogCategories.map((item, index) => {
+			// 	this.counts.push(item.count);
+			// });
+
+			// if (!this.firstLoad) {
+			// 	this.firstLoad = true;
+			// }
+
+			// this.totalCount = result.totalCount;
+			// this.loaded = true;
+
+			// this.utilsService.scrollToPageContent();
 		});
 	}
 

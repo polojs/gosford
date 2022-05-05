@@ -28,7 +28,7 @@ export class PostOneComponent implements OnInit {
 
 	ngOnInit(): void {
 		console.log("molla post one getting exe");
-		this.paddingTop = Math.floor((parseFloat(this.post.image[0].height.toString()) / parseFloat(this.post.image[0].width.toString()) * 1000)) / 10 + '%';
+		this.paddingTop = Math.floor((parseFloat(this.post.image.height.toString()) / parseFloat(this.post.image.width.toString()) * 1000)) / 10 + '%';
 	}
 
 	showModal(event: Event) {

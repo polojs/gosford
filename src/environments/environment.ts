@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   demo: 'demo6',
-  SERVER_URL: 'https://gosford.herokuapp.com',
+  SERVER_URL: 'http://localhost:3000',
   SERVER_URL_NEW: 'http://localhost:3000'
 };
 

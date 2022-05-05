@@ -34,25 +34,34 @@ export class SingleDefaultPageComponent implements OnInit {
 	paddingTop = '100%';
 
 	constructor(public activeRoute: ActivatedRoute, public router: Router, private apiService: ApiService, public utilsService: UtilsService, private modalService: ModalService) {
-		console.log(this.router.url, "url");
+		console.log("getting executed single test bnlog");
+
 		this.activeRoute.params.subscribe(params => {
-			console.log(params, "params");
 			this.loaded = false;
+			this.apiService.fetchBlogs().subscribe(blogs => {
+				blogs = this.apiService.flattenObj(blogs)
+				blogs = blogs.filter(element => {if(element.slug == params.slug) return element})
+				this.post = blogs[0]
+				this.loaded = true
+				console.log(this.post, "post");
+			})
+			console.log(params, "params");
 
-			this.apiService.fetchSinglePost(params['slug']).subscribe(result => {
-				this.post = result.blog;
-				this.blogCategories = result.categories;
-				this.relatedPosts = result.relatedBlogs;
-				this.prevPost = result.prevBlog;
-				this.nextPost = result.nextBlog;
-				this.paddingTop = Math.floor((parseFloat(this.post.image[0].height.toString()) / parseFloat(this.post.image[0].width.toString()) * 1000)) / 10 + '%';
 
-				if (!this.firstLoad) {
-					this.firstLoad = true;
-				}
+			// this.apiService.fetchSinglePost(params['slug']).subscribe(result => {
+			// 	this.post = result.blog;
+			// 	this.blogCategories = result.categories;
+			// 	this.relatedPosts = result.relatedBlogs;
+			// 	this.prevPost = result.prevBlog;
+			// 	this.nextPost = result.nextBlog;
+			// 	this.paddingTop = Math.floor((parseFloat(this.post.image[0].height.toString()) / parseFloat(this.post.image[0].width.toString()) * 1000)) / 10 + '%';
 
-				this.loaded = true;
-			});
+			// 	if (!this.firstLoad) {
+			// 		this.firstLoad = true;
+			// 	}
+
+			// 	this.loaded = true;
+			// });
 		});
 	}
 

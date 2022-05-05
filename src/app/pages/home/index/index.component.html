@@ -4,7 +4,7 @@
             <div class="intro-slide" style="background-image: url('assets/images/farm/farm_house.jpg');">
                 <div class="container intro-content text-center" contentAnim aniName="fadeInUpShorter">
                     <h3 class="intro-subtitle text-white">Welcome to</h3>
-                    <h1 class="intro-title text-white">little gosford farm shop</h1>
+                    <h1 class="intro-title text-white">little gosford farm</h1>
 
                     <a routerLink="/shop" class="btn btn-outline-white-4">
                         <span>Discover More</span>
@@ -12,12 +12,12 @@
                 </div>
             </div>
 
-            <div class="intro-slide" style="background-image: url('assets/images/farm/farm_templ.jpg')">
+            <div class="intro-slide" style="background-image: url('assets/images/farm/caravan_top.JPG')">
                 <div class="container intro-content text-center" contentAnim aniName="fadeInUpShorter">
                     <h3 class="intro-subtitle text-white"></h3>
-                    <h1 class="intro-title text-white">sample text</h1>
+                    <h1 class="intro-title text-white">Caravan Park</h1>
 
-                    <a routerLink="/shop" class="btn btn-outline-white-4">
+                    <a routerLink="/caravan" class="btn btn-outline-white-4">
                         <span>Discover More</span>
                     </a>
                 </div>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4 order-lg-last">
+                <div class="col-sm-6 col-lg-4 order-lg-last" (click)="changeRoute('shop')" style="cursor: pointer;">
                     <div class="banner">
                         <a href="javascript:;">
                             <molla-image src="assets/images/farm/bread.jpg" style="filter:brightness(80%)" alt="Banner" width="370"
@@ -56,10 +56,10 @@
 
                 <div class="col-lg-4">
                     <div class="row">
-                        <div class="col-sm-6 col-lg-12">
+                        <div class="col-sm-6 col-lg-12" (click)="changeRoute('caravan')" style="cursor: pointer;">
                             <div class="banner">
                                 <a href="javascript:;">
-                                    <molla-image src="assets/images/farm/caravan.jpg" style="filter:brightness(80%)" alt="Banner"
+                                    <molla-image src="assets/images/farm/caravanfront.JPG" style="filter:brightness(80%)" alt="Banner"
                                         width="370" height="265"></molla-image>
                                 </a>
 

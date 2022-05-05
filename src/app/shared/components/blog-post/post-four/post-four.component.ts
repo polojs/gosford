@@ -19,12 +19,14 @@ export class PostFourComponent implements OnInit {
 
 	sliderOption = { ...sliderOpt, loop: false };
 	SERVER_URL = environment.SERVER_URL;
+	temp = "http://localhost:1337"
 	paddingTop = '100%';
 
 	constructor(private modalService: ModalService) { }
 
 	ngOnInit(): void {
-		this.paddingTop = Math.floor((parseFloat(this.post.image[0].height.toString()) / parseFloat(this.post.image[0].width.toString()) * 1000)) / 10 + '%';
+		console.log(this.post, "post within");
+		this.paddingTop = Math.floor((parseFloat(this.post.image.height.toString()) / parseFloat(this.post.image.width.toString()) * 1000)) / 10 + '%';
 	}
 
 	showModal(event: Event) {

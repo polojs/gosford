@@ -6,7 +6,7 @@
 		<molla-isotope-grid #blogIsotope [class]="'entry-container max-col-' + itemsPerRow" [options]="gridOptions">
 			<div class="col-1 grid-sizer"></div>
 			<div *ngFor="let post of displayPosts | slice: start: start + maxCount" class="entry-item"
-				[ngClass]="getPostCategory(post) + ' col-md-6 col-lg-' + (12 / itemsPerRow)" [ngSwitch]="postType">
+				[ngClass]="'col-md-6 col-lg-' + (12 / itemsPerRow)" [ngSwitch]="postType">
 				<molla-post-one [post]="post" [adClass]="justifyClass" *ngSwitchCase="1" [isContent]="isContent">
 				</molla-post-one>
 				<molla-post-three [post]="post" [adClass]="justifyClass" *ngSwitchCase="3"></molla-post-three>

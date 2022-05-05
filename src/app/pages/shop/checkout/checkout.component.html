@@ -24,7 +24,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label>First Name *</label>
-                                    <input [(ngModel)]="info.firstName" type="text" class="form-control" name="firstName" required>
+                                    <input [(ngModel)]="info.firstName" type="text" class="form-control" name="name" required>
                                 </div>
 
                                 <div class="col-sm-6">
@@ -37,7 +37,7 @@
 
                                 <div class="col-sm-6">
                                     <label>Phone *</label>
-                                    <input [(ngModel)]="info.telephone" type="tel" name="tel" class="form-control" required>
+                                    <input [(ngModel)]="info.telephone" name="phone" type="tel" name="tel" class="form-control" required>
                                 </div>
                             </div>
 
@@ -52,10 +52,10 @@
                                 <label [ngClass]="{'button-color': selfPickup === false}" class="btn btn-outline-primary" style="font-size: larger;" for="btnradio2">Store-pickup</label>
                               </div>
                             <div *ngIf="this.selfPickup">
-                              <ngb-datepicker class="date" #dp [minDate]="minDate" [(ngModel)]="model" style="font-size: large;" (navigate)="date = $event.next"></ngb-datepicker>
+                              <ngb-datepicker class="date" #dp [minDate]="minDate" [(ngModel)]="model" name="date"  style="font-size: large;" (navigate)="date = $event.next"></ngb-datepicker>
                             </div>
                             <div *ngIf="!this.selfPickup">
-                                <ngb-datepicker class="date" [minDate]="minDate" [markDisabled]="markDisabled" #dp [(ngModel)]="model" style="font-size: large;" (navigate)="date = $event.next"></ngb-datepicker>
+                                <ngb-datepicker class="date" [minDate]="minDate" [markDisabled]="markDisabled" name="date"  #dp [(ngModel)]="model" style="font-size: large;" (navigate)="date = $event.next"></ngb-datepicker>
                               </div>
                             <div class="description">Choose a preferred pickup date for your order. <b>Self-pickup</b> is available on every day of the week. <b>Store-pickup</b> is available only on store opening days. 
                                 <br>
@@ -76,7 +76,7 @@
                                             <div class="form-group">
                                                 <label>First name <abbr class="required"
                                                         title="required">*</abbr></label>
-                                                <input [(ngModel)]="info.firstName" type="text" class="form-control" />
+                                                <input [(ngModel)]="info.firstName" name="first" type="text" class="form-control" />
                                             </div>
                                         </div>
 
@@ -84,7 +84,7 @@
                                             <div class="form-group">
                                                 <label>Last name <abbr class="required"
                                                         title="required">*</abbr></label>
-                                                <input [(ngModel)]="info.lastName" type="text" class="form-control" />
+                                                <input [(ngModel)]="info.lastName" name="lastname" type="text" class="form-control" />
                                             </div>
                                         </div>
                                     </div>
@@ -141,9 +141,9 @@
                                 </div>
                             </div>
 
-                            <label>Order notes (optional)</label>
+                            <!-- <label>Order notes (optional)</label>
                             <textarea class="form-control" cols="30" rows="4"
-                                placeholder="Notes about your order, e.g. special notes"></textarea>
+                                placeholder="Notes about your order, e.g. special notes"></textarea> -->
                         </div>
                         <aside class="col-lg-3">
                             <div class="summary">
