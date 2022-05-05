@@ -31,11 +31,10 @@ export class PageNotFoundComponent implements OnInit {
 
 	async fetchSuccessOrder(checkout_session: string): Promise<any>{
 		const body = {checkout_session: checkout_session}
-		this.http.post<any>(`${environment.SERVER_URL}/orders/confirm`, body).subscribe(order => {
-			this.firstName = order.firstName
+		this.http.post<any>(`${environment.SERVER_URL}/api/orders/confirm`, body).subscribe(order => {
+			this.firstName = order.firstname
 			this.email = order.email
 			this.changeDetector.detectChanges()
-			console.log(this.firstName, "firstname");
 		})
 	}
 }

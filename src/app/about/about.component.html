@@ -1,0 +1,47 @@
+<div class="main">
+    <molla-page-header title="About Us" subtitle="Pages"></molla-page-header>
+    <nav class="breadcrumb-nav border-0 mb-0">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a routerLink="/">Home</a>
+                </li>
+                <li class="breadcrumb-item active">About Us</li>
+            </ol>
+        </div>
+    </nav>
+
+    <div class="page-content pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="about-text text-center mt-3">
+                        <h2 class="title text-center mb-2">Who We Are</h2>
+                        <p>Little Gosford farm is a small family run farm of 43 acres of natural pasture land located in East Devon in the beautiful South West of England.
+                            We maintain a closed flock of Wiltshire horn sheep numbering an average of 100 ewes and lambs, furthermore a small flock of some 50 laying hens which are completely free range. At the time of writing we are bringing on 20 Black Angus beef cattle. We also raise, as the season dictates, pigs and meat birds. We have established a certificated location caravan and motorhome park under the auspices of the Caravan Club. For additional income we renovated what was originally designed as a lambing shed into a successful holiday let. The farm has its own water supply and we are self supporting in our electricity needs thanks to three solar generators that were installed in 2012. 
+                        </p>
+                        <!-- <img src="assets/images/farm/johnanne.jpg" alt="signature" class="mx-auto mb-5"> -->
+
+                        <molla-image style="margin-top: 20px;" src="assets/images/farm/johnanne.jpg" width="933" height="390" alt="signature"
+                            class="mx-auto w-100 mb-6"></molla-image>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="icon-box col-lg-4 col-sm-6" [ngClass]="item.adClass" *ngFor="let item of iconBoxes">
+                    <span class="icon-box-icon">
+                        <i [ngClass]="item.icon"></i>
+                    </span>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title">{{ item.title }}</h3>
+                        <p [innerHTML]="item.content | safeContent"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-2"></div>
+
+    </div>
+</div>

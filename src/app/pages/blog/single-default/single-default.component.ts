@@ -43,7 +43,6 @@ export class SingleDefaultPageComponent implements OnInit {
 				blogs = blogs.filter(element => {if(element.slug == params.slug) return element})
 				this.post = blogs[0]
 				this.loaded = true
-				console.log(this.post, "post");
 			})
 			console.log(params, "params");
 

@@ -3,8 +3,9 @@ import { sliderOpt } from 'src/app/shared/data';
 export const introSlider = {
     ...sliderOpt,
     nav: false,
-    loop: false,
+    loop: true,
     autoplay: true,
+    autoplayTimeout:5000,
     responsive: {
         992: {
             nav: true

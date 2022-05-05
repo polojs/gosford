@@ -14,13 +14,13 @@ interface Counter {
 export const iconBoxes: IconBox[] = [
     {
         adClass: "icon-box icon-box-sm text-center",
-        icon: "icon-puzzle-piece",
+        icon: "icon-canadian-maple-leaf",
         title: "Design Quality",
         content: "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero <br>eu augue."
     },
     {
         adClass: "icon-box icon-box-sm text-center",
-        icon: "icon-life-ring",
+        icon: "icon-life-bouy",
         title: "Professional Support",
         content: "Praesent dapibus, neque id cursus faucibus, <br>tortor neque egestas augue, eu vulputate <br>magna eros eu erat. "
     },

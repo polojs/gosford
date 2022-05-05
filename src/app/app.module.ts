@@ -34,6 +34,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { ShopComponent } from './shop/shop.component';
 import { CaravanComponent } from './caravan/caravan.component';
 import {ShareModule} from 'ngx-sharebuttons';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import {ShareModule} from 'ngx-sharebuttons';
     ContactComponent,
     ShopComponent,
     CaravanComponent,
+    AboutComponent,
   ],
   imports: [
     FormsModule,
