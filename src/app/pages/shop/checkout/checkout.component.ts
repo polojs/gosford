@@ -9,7 +9,7 @@ import { NgbCalendar, NgbDate, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap'
 import { FormControl } from '@angular/forms';
 import { WeekDay } from '@angular/common';
 
-const stripePromise = loadStripe('pk_test_51KsVutLcDvWRMYZqZ92DKW9fEE0aG72TDAHKmJEKJ0Xl8sVlxu0IqIeQ20GklKBWlx0cG3HnEzuA7OJAVD1g4aWQ00emlxWzPx')
+const stripePromise = loadStripe('pk_live_51KsVutLcDvWRMYZqzJBHf6u4PxRkTzGXiZ9pJMx4bqrDhtWhatPl72DPARxjjWNAxmgtkaxwbk3kgPaiSw01NCvK00xIoqlcND')
 
 declare var $: any;
 
