@@ -27,8 +27,6 @@ export class QuantityInputComponent implements OnInit, OnChanges {
 	}
 
 	increment () {
-		if ( this.max <= 0 || this.current >= this.max )
-			return;
 
 		this.current++;
 		this.changeQty.emit( this.current );

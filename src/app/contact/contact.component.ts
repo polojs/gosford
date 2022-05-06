@@ -48,8 +48,6 @@ export class ContactComponent implements OnInit {
     this.info.message = ""
     this.info.subject = ""
     this.changeDetector.detectChanges()
-    this.successMessage = "Thank you for your message, we will get back to you as soon as possible!"
-
   }
 
 }

@@ -36,6 +36,8 @@ import { CaravanComponent } from './caravan/caravan.component';
 import {ShareModule} from 'ngx-sharebuttons';
 import { AboutComponent } from './about/about.component';
 import { ShepherdComponent } from './shepherd/shepherd.component';
+import { OldfarmComponent } from './oldfarm/oldfarm.component';
+import { SustainableComponent } from './sustainable/sustainable.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { ShepherdComponent } from './shepherd/shepherd.component';
     CaravanComponent,
     AboutComponent,
     ShepherdComponent,
+    OldfarmComponent,
+    SustainableComponent,
   ],
   imports: [
     FormsModule,

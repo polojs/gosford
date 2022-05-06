@@ -94,7 +94,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 		let date = new Date()
 		this.minDate.year = date.getFullYear()
 		this.minDate.month = date.getMonth() + 1
-		this.minDate.day = date.getDate()
+		this.minDate.day = date.getDate() + 1
 		console.log(this.minDate);
 	}
 

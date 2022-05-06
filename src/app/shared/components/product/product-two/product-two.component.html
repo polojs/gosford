@@ -3,7 +3,6 @@
         <span class="product-label label-new" *ngIf="product.new">New</span>
         <span class="product-label label-sale" *ngIf="product.sale_price">Sale</span>
         <span class="product-label label-top" *ngIf="product.top">Top</span>
-        <span class="product-label label-out" *ngIf="!product.stock || product.stock == 0">Out Of Stock</span>
 
         <a [routerLink]="['/product/default/'+ product.slug]">
             <molla-image [src]="SERVER_URL + product.sm_pictures[0].url" alt="Product" class="product-image">

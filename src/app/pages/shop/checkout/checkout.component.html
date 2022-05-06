@@ -57,12 +57,11 @@
                             <div *ngIf="!this.selfPickup">
                                 <ngb-datepicker class="date" [minDate]="minDate" [markDisabled]="markDisabled" name="date"  #dp [(ngModel)]="model" style="font-size: large;" (navigate)="date = $event.next"></ngb-datepicker>
                               </div>
-                            <div class="description">Choose a preferred pickup date for your order. <b>Self-pickup</b> is available on every day of the week. <b>Store-pickup</b> is available only on store opening days. 
+                            <div class="description" style="font-size:1.5rem ;">Choose a preferred pickup date for your order. <b>Self-pickup</b> is available on every day of the week. <b>Store-pickup</b> is available only on store opening days. 
                                 <br>
-                                <br>
-                                <p>If you have chosen self-pickup but cannot pick up your order on that day, DON'T WORRY. Your order will still be there for you to be picked up the following days.</p>
+                                <p style="font-size: 1.5rem;">If you have chosen self-pickup but cannot pick up your order on that day, DON'T WORRY. Your order will still be there for you to be picked up the following days.</p>
                                 <hr>
-                            <p>If your pickup date is within the next 4 days, we may not have <b>Sourdough</b> on stock. If the selected Date is not available for Sourdough, we will communicate with you via email. Thanks for your understanding.</p></div>
+                            <p style="font-size:1.5rem ;">If your pickup date is within the next 4 days, we may not have <b>Sourdough</b> on stock. If the selected Date is not available for Sourdough, we will communicate with you via email. Thanks for your understanding.</p></div>
         
                         </div>
                             <div class="form-group">
@@ -162,16 +161,16 @@
                                             <td><a
                                                     [routerLink]="['/product/default/'+ product.slug]">{{ product.name }}</a>
                                             </td>
-                                            <td>{{ product.sum.toFixed( 2 ) | currency  }}</td>
+                                            <td>{{ product.sum.toFixed( 2 ) | currency:"GBP"  }}</td>
                                         </tr>
                                         <tr class="summary-subtotal">
                                             <td>Subtotal:</td>
-                                            <td>${{ (cartService.priceTotal | async).toFixed(2) }}</td>
+                                            <td>£{{ (cartService.priceTotal | async).toFixed(2) }}</td>
                                         </tr>
 
                                         <tr class="summary-total">
                                             <td>Total:</td>
-                                            <td>${{ (cartService.priceTotal | async).toFixed(2) }}</td>
+                                            <td>£{{ (cartService.priceTotal | async).toFixed(2) }}</td>
                                         </tr>
                                     </tbody>
                                 </table>

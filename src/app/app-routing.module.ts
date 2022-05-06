@@ -10,6 +10,8 @@ import { PageNotFoundComponent } from './pages/others/page-not-found/page-not-fo
 import { CaravanComponent } from './caravan/caravan.component';
 import { AboutComponent } from './about/about.component';
 import { ShepherdComponent } from './shepherd/shepherd.component';
+import { OldfarmComponent } from './oldfarm/oldfarm.component';
+import { SustainableComponent } from './sustainable/sustainable.component';
 
 const routes: Routes = [
 	{
@@ -44,6 +46,16 @@ const routes: Routes = [
 				path: 'shepherd',
 				pathMatch: 'full',
 				component: ShepherdComponent
+			},	
+			{
+				path: 'oldfarmshop',
+				pathMatch: 'full',
+				component: OldfarmComponent
+			},	
+			{
+				path: 'sustainable',
+				pathMatch: 'full',
+				component: SustainableComponent
 			},	
 			{
 				path: 'about',

@@ -4,24 +4,22 @@
     <div class="ratings-container">
         <div class="ratings">
             <div class="ratings-val" [style.width]="product.ratings * 20 + '%'"></div>
-            <span class="tooltip-text">{{ product.ratings.toFixed(2) }}</span>
         </div>
-        <span class="ratings-text">( {{ product.review }} Reviews )</span>
     </div>
 
     <div class="product-price" *ngIf="!product.stock || product.stock == 0 else elseBlock">
-        <span class="out-price">${{ product.price.toFixed(2) }}</span>
+        <span class="out-price">£{{ product.price.toFixed(2) }}</span>
     </div>
 
     <ng-template #elseBlock>
-        <div class="product-price" *ngIf="minPrice == maxPrice else elseBlock">${{ minPrice.toFixed(2) }}</div>
+        <div class="product-price" *ngIf="minPrice == maxPrice else elseBlock">£{{ minPrice.toFixed(2) }}</div>
         <ng-template #elseBlock>
             <div class="product-price" *ngIf="product.variants.length == 0 else elseBlock">
-                <span class="new-price">${{ minPrice.toFixed(2) }}</span>
-                <span class="old-price">${{ maxPrice.toFixed(2) }}</span>
+                <span class="new-price">£{{ minPrice.toFixed(2) }}</span>
+                <span class="old-price">£{{ maxPrice.toFixed(2) }}</span>
             </div>
             <ng-template #elseBlock>
-                <div class="product-price">${{minPrice.toFixed(2)}}&ndash;${{maxPrice.toFixed(2)}}</div>
+                <div class="product-price">£{{minPrice.toFixed(2)}}&ndash;£{{maxPrice.toFixed(2)}}</div>
             </ng-template>
         </ng-template>
     </ng-template>

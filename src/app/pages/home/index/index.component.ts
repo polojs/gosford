@@ -32,7 +32,10 @@ export class IndexComponent implements OnInit {
 			const test = this.apiService.flattenObj(result)
 			for (const el of test){
 				el.variants = []
+				el.stock = 999
+				el.ratings = 5
 			}
+
 			this.products = test
 			this.loaded = true
 		})

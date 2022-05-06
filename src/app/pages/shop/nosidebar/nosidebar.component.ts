@@ -69,6 +69,8 @@ export class NosidebarPageComponent implements OnInit {
 			console.log(result, "result");
 			for(const el of result){
 				el.variants = []
+				el.stock = 999
+				el.ratings = 5
 			}
 			this.products = result
 			this.totalCount = result.length

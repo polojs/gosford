@@ -3,7 +3,6 @@
         <span class="product-label label-new" *ngIf="product.new">New</span>
         <span class="product-label label-sale" *ngIf="product.sale_price">Sale</span>
         <span class="product-label label-top" *ngIf="product.top">Top</span>
-        <span class="product-label label-out" *ngIf="!product.stock || product.stock == 0">Out Of Stock</span>
 
         <a [routerLink]="['/product/'+ product.slug]">
             <molla-image [src]="SERVER_URL + product.sm_pictures[0].url" alt="Product" class="product-image">
@@ -12,12 +11,6 @@
                 *ngIf="product.sm_pictures[1]"></molla-image>
         </a>
 
-        <div class="product-action-vertical">
-            <a href="javascript:;" class="btn-product-icon btn-wishlist btn-expandable"
-                [class.added-to-wishlist]="isInWishlist()" (click)="addToWishlist($event)">
-                <span>{{ isInWishlist() ? 'go' : 'add' }} to Wishlist</span>
-            </a>
-        </div>
 
         <div class="product-action action-icon-top" *ngIf="product.stock && product.stock !== 0">
             <a [routerLink]="['/product/default/'+ product.slug]" class="btn-product btn-cart btn-select"
@@ -29,13 +22,6 @@
                     <span>add to cart</span>
                 </button>
             </ng-template>
-
-            <button class="btn-product btn-quickview" title="Quick view" (click)="quickView($event)">
-                <span>quick view</span>
-            </button>
-            <button class="btn-product btn-compare" title="Compare" (click)="addToCompare($event)">
-                <span>compare</span>
-            </button>
         </div>
     </figure>
 
@@ -67,13 +53,6 @@
             </ng-template>
         </ng-template>
 
-        <div class="ratings-container">
-            <div class="ratings">
-                <div class="ratings-val" [style.width]="product.ratings * 20 + '%'"></div>
-                <span class="tooltip-text">{{ product.ratings.toFixed(2) }}</span>
-            </div>
-            <span class="ratings-text">( {{ product.review }} Reviews )</span>
-        </div>
 
         <div class="product-nav product-nav-dots" *ngIf="product.variants.length > 0">
             <div class="row no-gutters">

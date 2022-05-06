@@ -6,6 +6,7 @@ export const introSlider = {
     loop: true,
     autoplay: true,
     autoplayTimeout:5000,
+    stopOnHover: true,
     responsive: {
         992: {
             nav: true

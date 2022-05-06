@@ -1,7 +1,6 @@
 <div class="product product-7 text-center">
     <figure class="product-media">
-        <span class="product-label label-out" *ngIf="!product.available">Out of
-            Stock</span>
+
 
         <a [routerLink]="['/product/'+ product.slug]">
             <molla-image [src]="SERVER_URL + product.sm_pictures[0].url" alt="Product" class="product-image">
@@ -41,18 +40,18 @@
         </h3>
 
         <div class="product-price" *ngIf="!product.stock || product.stock == 0 else elseBlock">
-            <span class="out-price">${{ product.price.toFixed(2) }}</span>
+            <span class="out-price">£{{ product.price.toFixed(2) }}</span>
         </div>
 
         <ng-template #elseBlock>
-            <div class="product-price" *ngIf="minPrice == maxPrice else elseBlock">${{ minPrice.toFixed(2) }}</div>
+            <div class="product-price" *ngIf="minPrice == maxPrice else elseBlock">£{{ minPrice.toFixed(2) }}</div>
             <ng-template #elseBlock>
                 <div class="product-price" *ngIf="product.variants.length == 0 else elseBlock">
-                    <span class="new-price">Now ${{ minPrice.toFixed(2) }}</span>
-                    <span class="old-price">Was ${{ maxPrice.toFixed(2) }}</span>
+                    <span class="new-price">Now £{{ minPrice.toFixed(2) }}</span>
+                    <span class="old-price">Was £{{ maxPrice.toFixed(2) }}</span>
                 </div>
                 <ng-template #elseBlock>
-                    <div class="product-price">${{minPrice.toFixed(2)}}&ndash;${{maxPrice.toFixed(2)}}</div>
+                    <div class="product-price">£{{minPrice.toFixed(2)}}&ndash;£{{maxPrice.toFixed(2)}}</div>
                 </ng-template>
             </ng-template>
         </ng-template>

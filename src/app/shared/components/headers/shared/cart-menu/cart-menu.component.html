@@ -19,7 +19,7 @@
 
                         <span class="cart-product-info">
                             <span class="cart-product-qty">{{ product.qty }}</span>
-                            x ${{ product.sale_price ? product.sale_price.toFixed(2): product.price.toFixed(2) }}
+                            x £{{ product.sale_price ? product.sale_price.toFixed(2): product.price.toFixed(2) }}
                         </span>
                     </div>
 
@@ -37,7 +37,7 @@
             <div class="dropdown-cart-total">
                 <span>Total</span>
 
-                <span class="cart-total-price">${{ (cartService.priceTotal | async).toFixed(2) }}</span>
+                <span class="cart-total-price">£{{ (cartService.priceTotal | async).toFixed(2) }}</span>
             </div>
 
             <div class="dropdown-cart-action">

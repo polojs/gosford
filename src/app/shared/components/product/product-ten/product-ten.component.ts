@@ -34,6 +34,7 @@ export class ProductTenComponent implements OnInit {
 	) { }
 
 	ngOnInit(): void {
+		console.log(this.product, "product");
 		let min = this.minPrice;
 		let max = this.maxPrice;
 
