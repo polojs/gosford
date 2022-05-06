@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './pages/others/page-not-found/page-not-found.component';
 import { CaravanComponent } from './caravan/caravan.component';
 import { AboutComponent } from './about/about.component';
+import { ShepherdComponent } from './shepherd/shepherd.component';
 
 const routes: Routes = [
 	{
@@ -38,6 +39,11 @@ const routes: Routes = [
 				path: 'contact',
 				pathMatch: 'full',
 				component: ContactComponent
+			},	
+			{
+				path: 'shepherd',
+				pathMatch: 'full',
+				component: ShepherdComponent
 			},	
 			{
 				path: 'about',

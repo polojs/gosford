@@ -35,6 +35,7 @@ import { ShopComponent } from './shop/shop.component';
 import { CaravanComponent } from './caravan/caravan.component';
 import {ShareModule} from 'ngx-sharebuttons';
 import { AboutComponent } from './about/about.component';
+import { ShepherdComponent } from './shepherd/shepherd.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AboutComponent } from './about/about.component';
     ShopComponent,
     CaravanComponent,
     AboutComponent,
+    ShepherdComponent,
   ],
   imports: [
     FormsModule,

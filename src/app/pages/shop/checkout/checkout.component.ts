@@ -9,7 +9,7 @@ import { NgbCalendar, NgbDate, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap'
 import { FormControl } from '@angular/forms';
 import { WeekDay } from '@angular/common';
 
-const stripePromise = loadStripe('pk_live_51KsVutLcDvWRMYZqzJBHf6u4PxRkTzGXiZ9pJMx4bqrDhtWhatPl72DPARxjjWNAxmgtkaxwbk3kgPaiSw01NCvK00xIoqlcND')
+const stripePromise = loadStripe(environment.STRIPE_TEST)
 
 declare var $: any;
 
@@ -112,6 +112,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 	}
 
 	handleBuy = async () => {
+		console.log(this.model, "model");
 		const obj = {user: this.info, product: [], date: this.model, selfPickup: this.selfPickup}
 		for(const product of this.cartItems){
 			console.log(product, "product");

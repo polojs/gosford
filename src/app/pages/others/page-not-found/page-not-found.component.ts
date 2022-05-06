@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
 
 export class PageNotFoundComponent implements OnInit {
 
-	constructor(public router: ActivatedRoute, private http: HttpClient, private changeDetector: ChangeDetectorRef) {
+	constructor(public router: ActivatedRoute, private http: HttpClient, private changeDetector: ChangeDetectorRef, private api: ApiService) {
 	}
 
 	session_id = ""
@@ -21,6 +21,11 @@ export class PageNotFoundComponent implements OnInit {
 	firstName = ""
 
 	email = ""
+
+	pickupdate = ""
+
+	orderid = ""
+
 
 	ngOnInit(): void {
 		this.router.queryParams.subscribe(params => {
@@ -31,9 +36,14 @@ export class PageNotFoundComponent implements OnInit {
 
 	async fetchSuccessOrder(checkout_session: string): Promise<any>{
 		const body = {checkout_session: checkout_session}
-		this.http.post<any>(`${environment.SERVER_URL}/api/orders/confirm`, body).subscribe(order => {
+		this.http.post<any>(`${environment.SERVER_URL}/api/confirm`, body).subscribe(order => {
+
+			order = order[0]
+			console.log(order);
 			this.firstName = order.firstname
 			this.email = order.email
+			this.orderid = order.id
+			this.pickupdate = order.pickuptime
 			this.changeDetector.detectChanges()
 		})
 	}
