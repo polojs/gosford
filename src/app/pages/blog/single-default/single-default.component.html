@@ -27,7 +27,7 @@
 							<figure class="entry-media" *ngIf="post.image.length <= 1 else carouselBlock"
 								[class.entry-video]="post.type == 'video'" [style.padding-top]="paddingTop">
 								<a href="javascript:;" *ngIf="post.type !== 'video' else videoBlock">
-									<molla-image [src]="SERVER_URL + post.image.url" alt="image desc"
+									<molla-image [src]="post.image.url" alt="image desc"
 										[fixedPt]="paddingTop"></molla-image>
 								</a>
 
@@ -40,7 +40,7 @@
 							</figure>
 
 							<ng-template #carouselBlock>
-								<img [src]="SERVER_URL + post.image.url" alt="">
+								<img [src]="post.image.url" alt="">
 	
 							</ng-template>
 
