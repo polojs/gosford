@@ -100,7 +100,7 @@
                 <div class="col-6">
                     <figure class="product-media">
                         <a [routerLink]="['/product/default/'+ product.slug]">
-                            <molla-image [src]="SERVER_URL + product.sm_pictures[0].url" alt="Product"
+                            <molla-image [src]="product.sm_pictures[0].url" alt="Product"
                                 class="product-image">
                             </molla-image>
                         </a>

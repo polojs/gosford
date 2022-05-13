@@ -41,8 +41,8 @@ export class GalleryDefaultComponent implements OnInit {
 		for (let i = 0; i < this.product.pictures.length; i++) {
 			console.log(this.product, "i am the product");
 			this.album.push({
-				src: this.SERVER_URL + this.product.pictures[i].url,
-				thumb: this.SERVER_URL + this.product.sm_pictures[i].url,
+				src:this.product.pictures[i].url,
+				thumb:this.product.sm_pictures[i].url,
 				caption: this.product.name
 			});
 		}

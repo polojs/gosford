@@ -18,7 +18,7 @@
                 <div class="col-5 d-flex mb-1">
                     <button [class]="'product-masonry-item p-0 w-100' + ( 0 === currentIndex ? ' active' : '' )"
                         (click)="changeImage( $event, 0 )">
-                        <molla-image [src]="SERVER_URL + product.sm_pictures[0].url" alt="Product back" class="w-100">
+                        <molla-image [src]="product.sm_pictures[0].url" alt="Product back" class="w-100">
                         </molla-image>
                     </button>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="col-7 d-flex mb-1" *ngIf="product.sm_pictures.length > 1">
                     <button [class]="'product-masonry-item p-0 w-100' + ( 1 === currentIndex ? ' active' : '' )"
                         (click)="changeImage( $event, 1 )">
-                        <molla-image [src]="SERVER_URL + product.sm_pictures[1].url" alt="Product back" class="w-100">
+                        <molla-image [src]="product.sm_pictures[1].url" alt="Product back" class="w-100">
                         </molla-image>
                     </button>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="col-7 d-flex mb-1" *ngIf="product.sm_pictures.length > 2">
                     <button [class]="'product-masonry-item p-0 w-100' + ( 2 === currentIndex ? ' active' : '' )"
                         (click)="changeImage( $event, 2 )">
-                        <molla-image [src]="SERVER_URL + product.sm_pictures[2].url" alt="Product back" class="w-100">
+                        <molla-image [src]="product.sm_pictures[2].url" alt="Product back" class="w-100">
                         </molla-image>
                     </button>
                 </div>

@@ -16,7 +16,7 @@
         <div id="product-zoom-gallery" class="product-image-gallery">
             <a [ngClass]="'product-gallery-item' + ( i === currentIndex ? ' active' : '' )" href="#"
                 (click)="changeImage( $event, i )" *ngFor="let item of product.pictures; let i = index;">
-                <molla-image [src]="SERVER_URL + product.sm_pictures[i].url" alt="Product side" class="product-image">
+                <molla-image [src]="product.sm_pictures[i].url" alt="Product side" class="product-image">
                 </molla-image>
             </a>
         </div>

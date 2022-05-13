@@ -10,7 +10,7 @@
                     <a href="#"
                         [ngClass]="'product-gallery-item h-auto p-lg-0 mb-0 mb-lg-1 ' + ( i === currentIndex ? ' active' : '' )"
                         (click)="changeImage( $event, i )" *ngFor="let item of product.pictures; let i = index;">
-                        <molla-image [src]="SERVER_URL + product.sm_pictures[i].url" alt="Product side"
+                        <molla-image [src]="product.sm_pictures[i].url" alt="Product side"
                             class="product-image mb-0" [fixedPt]="paddingTop">
                         </molla-image>
                     </a>
