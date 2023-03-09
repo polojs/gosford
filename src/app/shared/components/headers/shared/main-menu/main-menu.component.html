@@ -1,29 +1,30 @@
 <nav class="main-nav">
-    <ul class="menu sf-arrows" style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">
-        <li class="megamenu-container" [class.active]="current=='/'">
-            <a routerLink="/">Home</a>
-        </li>
-        <li [class.active]="current.includes('/shop')">
-            <a routerLink="/shop">Farm Shop</a>
-        </li>
-        <li [class.active]="current.includes('/bungalow')">
-            <a routerLink="/bungalow">Bungalow</a>
-        </li>
-        <li [class.active]="current.includes('/carava')">
-            <a routerLink="/caravan">Caravan</a>
-        </li>
-        <li [class.active]="current.includes('/shepherd')">
-            <a routerLink="/shepherd">Hut
-            </a>
-        </li>
-        <li [class.active]="current.includes('/contact')">
-            <a routerLink="/contact">Contact & Location</a>
-        </li>
-        <li [class.active]="current.includes('/blog')">
-            <a routerLink="/blog/all">Blog</a>
-        </li>
-        <li [class.active]="current.includes('/about')">
-            <a routerLink="/about">About</a>
-        </li>
-    </ul>
+  <ul
+    class="menu sf-arrows"
+    style="
+      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    "
+  >
+    <li class="megamenu-container" [class.active]="current == '/'">
+      <a routerLink="/">Home</a>
+    </li>
+    <li [class.active]="current.includes('/bungalow')">
+      <a routerLink="/bungalow">Bungalow</a>
+    </li>
+    <li [class.active]="current.includes('/carava')">
+      <a routerLink="/caravan">Caravan</a>
+    </li>
+    <li [class.active]="current.includes('/shepherd')">
+      <a routerLink="/shepherd">Hut </a>
+    </li>
+    <li [class.active]="current.includes('/contact')">
+      <a routerLink="/contact">Contact & Location</a>
+    </li>
+    <li [class.active]="current.includes('/blog')">
+      <a routerLink="/blog/all">Blog</a>
+    </li>
+    <li [class.active]="current.includes('/about')">
+      <a routerLink="/about">About</a>
+    </li>
+  </ul>
 </nav>

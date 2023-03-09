@@ -1,113 +1,181 @@
 <main class="main home-page skeleton-body">
-    <div class="intro-slider-container mb-0">
-        <owl-carousel carouselClasses="intro-slider owl-theme owl-nav-inside owl-light" [options]="introSlider">
-            <div class="intro-slide" style="background-image: url('assets/images/farm/wholefarm-min.JPG');">
-                <div class="container intro-content text-center" contentAnim aniName="fadeInUpShorter">
-                    <h3 class="intro-subtitle text-white">Welcome to</h3>
-                    <h1 class="intro-title text-white">little gosford farm</h1>
+  <div class="intro-slider-container mb-0">
+    <owl-carousel
+      carouselClasses="intro-slider owl-theme owl-nav-inside owl-light"
+      [options]="introSlider"
+    >
+      <div
+        class="intro-slide"
+        style="background-image: url('assets/images/farm/wholefarm-min.JPG')"
+      >
+        <div
+          class="container intro-content text-center"
+          contentAnim
+          aniName="fadeInUpShorter"
+        >
+          <h3 class="intro-subtitle text-white">Welcome to</h3>
+          <h1 class="intro-title text-white">little gosford farm</h1>
 
-                    <!-- <a routerLink="/shop" class="btn btn-outline-white-4">
+          <!-- <a routerLink="/shop" class="btn btn-outline-white-4">
                         <span>Discover More</span>
                     </a> -->
+        </div>
+      </div>
+
+      <div
+        class="intro-slide"
+        style="background-image: url('assets/images/farm/farmtop-min.JPG')"
+      >
+        <div
+          class="container intro-content text-center"
+          contentAnim
+          aniName="fadeInUpShorter"
+        >
+          <h3 class="intro-subtitle text-white"></h3>
+          <h1 class="intro-title text-white">Farm Shop</h1>
+
+          <a routerLink="/shop" class="btn btn-outline-white-4">
+            <span>Discover More</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="intro-slide"
+        style="background-image: url('assets/images/caravan/caravanrigh.JPG')"
+      >
+        <div
+          class="container intro-content text-center"
+          contentAnim
+          aniName="fadeInUpShorter"
+        >
+          <h3 class="intro-subtitle text-white"></h3>
+          <h1 class="intro-title text-white">Caravan Park</h1>
+
+          <a routerLink="/caravan" class="btn btn-outline-white-4">
+            <span>Discover More</span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="intro-slide"
+        style="background-image: url('assets/images/bungalow/bungaa-min.jpg')"
+      >
+        <div
+          class="container intro-content text-center"
+          contentAnim
+          aniName="fadeInUpShorter"
+        >
+          <h3 class="intro-subtitle text-white"></h3>
+          <h1 class="intro-title text-white">Holiday Bungalow</h1>
+
+          <a routerLink="/bungalow" class="btn btn-outline-white-4">
+            <span>Discover More</span>
+          </a>
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
+
+  <div class="pt-2 pb-3 first-section">
+    <div class="container" style="margin-top: 5px">
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <div class="row">
+            <div
+              class="col-sm-6 col-lg-12"
+              (click)="changeRoute('shop')"
+              style="cursor: pointer"
+            >
+              <div class="banner">
+                <a href="javascript:;">
+                  <molla-image
+                    src="assets/images/farm/farm_house-min.jpg"
+                    style="filter: brightness(80%)"
+                    alt="Banner"
+                    width="370"
+                    height="265"
+                  ></molla-image>
+                </a>
+
+                <div class="banner-content">
+                  <h3 class="banner-title text-white">
+                    Farm Shop & <br />
+                    Bakery
+                  </h3>
                 </div>
+              </div>
             </div>
 
-            <div class="intro-slide" style="background-image: url('assets/images/farm/farmtop-min.JPG')">
-                <div class="container intro-content text-center" contentAnim aniName="fadeInUpShorter">
-                    <h3 class="intro-subtitle text-white"></h3>
-                    <h1 class="intro-title text-white">Farm Shop</h1>
-
-                    <a routerLink="/shop" class="btn btn-outline-white-4">
-                        <span>Discover More</span>
-                    </a>
+            <div
+              class="col-sm-6 col-lg-12"
+              (click)="changeRoute('shepherd')"
+              style="cursor: pointer"
+            >
+              <div class="banner">
+                <a href="javascript:;">
+                  <molla-image
+                    src="assets/images/shepherd/shepherd-min.JPG"
+                    alt="Banner"
+                    width="370"
+                    height="265"
+                  ></molla-image>
+                </a>
+                <div class="banner-content">
+                  <h3 class="banner-title text-white">Shepherds<br />Hut</h3>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div
+              class="col-sm-6 col-lg-12"
+              (click)="changeRoute('caravan')"
+              style="cursor: pointer"
+            >
+              <div class="banner">
+                <a href="javascript:;">
+                  <molla-image
+                    src="assets/images/farm/caravan_top-min.JPG"
+                    style="filter: brightness(80%)"
+                    alt="Banner"
+                    width="370"
+                    height="265"
+                  ></molla-image>
+                </a>
+
+                <div class="banner-content">
+                  <h3 class="banner-title text-white">Caravan <br />Park</h3>
+                </div>
+              </div>
             </div>
 
-            <div class="intro-slide" style="background-image: url('assets/images/caravan/caravanrigh.JPG')">
-                <div class="container intro-content text-center" contentAnim aniName="fadeInUpShorter">
-                    <h3 class="intro-subtitle text-white"></h3>
-                    <h1 class="intro-title text-white">Caravan Park</h1>
-
-                    <a routerLink="/caravan" class="btn btn-outline-white-4">
-                        <span>Discover More</span>
-                    </a>
+            <div
+              class="col-sm-6 col-lg-12"
+              (click)="changeRoute('sustainable')"
+              style="cursor: pointer"
+            >
+              <div class="banner">
+                <a href="javascript:;">
+                  <molla-image
+                    src="assets/images/solar/solar.JPG"
+                    alt="Banner"
+                    width="370"
+                    height="265"
+                  ></molla-image>
+                </a>
+                <div class="banner-content">
+                  <h3 class="banner-title text-white">
+                    Sustainable & <br />Green
+                  </h3>
                 </div>
+              </div>
             </div>
-            <div class="intro-slide" style="background-image: url('assets/images/bungalow/bungaa-min.jpg')">
-                <div class="container intro-content text-center" contentAnim aniName="fadeInUpShorter">
-                    <h3 class="intro-subtitle text-white"></h3>
-                    <h1 class="intro-title text-white">Holiday Bungalow</h1>
-
-                    <a routerLink="/bungalow" class="btn btn-outline-white-4">
-                        <span>Discover More</span>
-                    </a>
-                </div>
-            </div>
-        </owl-carousel>
-    </div>
-
-    <div class="pt-2 pb-3 first-section">
-        <div class="container" style="margin-top: 5px;">
-            <div class="row justify-content-center">
-                <div class="col-lg-4">
-                    <div class="row">
-                        
-                        <div class="col-sm-6 col-lg-12" (click)="changeRoute('shop')" style="cursor: pointer;">
-                            <div class="banner">
-                                <a href="javascript:;">
-                                    <molla-image src="assets/images/farm/farm_house-min.jpg" style="filter:brightness(80%)" alt="Banner"
-                                        width="370" height="265"></molla-image>
-                                </a>
-
-                                <div class="banner-content">
-                                    <h3 class="banner-title text-white">Farm Shop & <br> Bakery</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-12" (click)="changeRoute('shepherd')" style="cursor: pointer;">
-                            <div class="banner">
-                                <a href="javascript:;">
-                                    <molla-image src="assets/images/shepherd/shepherd-min.JPG" alt="Banner"
-                                        width="370" height="265"></molla-image>
-                                </a>
-                                <div class="banner-content">
-                                    <h3 class="banner-title text-white">Shepherds<br>Hut</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="row">
-                        
-                        <div class="col-sm-6 col-lg-12" (click)="changeRoute('caravan')" style="cursor: pointer;">
-                            <div class="banner">
-                                <a href="javascript:;">
-                                    <molla-image src="assets/images/farm/caravan_top-min.JPG" style="filter:brightness(80%)" alt="Banner"
-                                        width="370" height="265"></molla-image>
-                                </a>
-
-                                <div class="banner-content">
-                                    <h3 class="banner-title text-white">Caravan <br>Park</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-12" (click)="changeRoute('sustainable')" style="cursor: pointer;">
-                            <div class="banner">
-                                <a href="javascript:;">
-                                    <molla-image src="assets/images/solar/solar.JPG" alt="Banner"
-                                        width="370" height="265"></molla-image>
-                                </a>
-                                <div class="banner-content">
-                                    <h3 class="banner-title text-white">Sustainable & <br>Green</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-sm-6 col-lg-4">
+          </div>
+        </div>
+        <!-- <div class="col-sm-6 col-lg-4">
                     <div class="banner">
                         <a href="javascript:;">
                             <molla-image src="assets/images/farm/sustainable.avif" style="filter:brightness(80%)" alt="Banner" width="370"
@@ -133,53 +201,79 @@
                     </div>
                 </div> -->
 
-                <div class="col-lg-4">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-12" (click)="changeRoute('oldfarmshop')" style="cursor: pointer;">
-                            <div class="banner">
-                                <a href="javascript:;">
-                                    <molla-image src="assets/images/oldfarm/oldfarm.JPG" style="filter:brightness(80%)" alt="Banner"
-                                        width="370" height="265"></molla-image>
-                                </a>
+        <div class="col-lg-4">
+          <div class="row">
+            <div
+              class="col-sm-6 col-lg-12"
+              (click)="changeRoute('oldfarmshop')"
+              style="cursor: pointer"
+            >
+              <div class="banner">
+                <a href="javascript:;">
+                  <molla-image
+                    src="assets/images/oldfarm/oldfarm.JPG"
+                    style="filter: brightness(80%)"
+                    alt="Banner"
+                    width="370"
+                    height="265"
+                  ></molla-image>
+                </a>
 
-                                <div class="banner-content">
-                                    <h3 class="banner-title text-white">Old <br>Farm Shop</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-12" (click)="changeRoute('bungalow')" style="cursor: pointer;">
-                            <div class="banner">
-                                <a href="javascript:;">
-                                    <molla-image src="assets/images/farm/bungalowbird.JPG" alt="Banner"
-                                        width="370" height="265"></molla-image>
-                                </a>
-                                <div class="banner-content">
-                                    <h3 class="banner-title text-white">Holiday <br>Bungalow</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="banner-content">
+                  <h3 class="banner-title text-white">Old <br />Farm Shop</h3>
                 </div>
+              </div>
             </div>
-    
-            <div class="mb-3"></div>
+
+            <div
+              class="col-sm-6 col-lg-12"
+              (click)="changeRoute('bungalow')"
+              style="cursor: pointer"
+            >
+              <div class="banner">
+                <a href="javascript:;">
+                  <molla-image
+                    src="assets/images/farm/bungalowbird.JPG"
+                    alt="Banner"
+                    width="370"
+                    height="265"
+                  ></molla-image>
+                </a>
+                <div class="banner-content">
+                  <h3 class="banner-title text-white">
+                    Holiday <br />Bungalow
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="mb-3"></div>
     </div>
-    <molla-top-collection [products]="products" [loaded]="loaded"></molla-top-collection>
-    <div class="video-banner video-banner-bg bg-image text-center mt-5" style="background-image: url('assets/images/farm/sheep.jpg'); background-color: #cbcac5;">
-        <div class="container" contentAnim aniName="fadeInUpShorter">
-            <h3 class="video-banner-title h1 text-white"><span>Little</span><strong>Gosford<i>/</i> Farm</strong></h3>
-            <a href="https://www.youtube.com/watch?v=F7EWw9SDbnM" class="btn-video btn-iframe" (click)="showVideoModal($event)"><i class="icon-play"></i></a>
-        </div>
+  </div>
+  <div
+    class="video-banner video-banner-bg bg-image text-center mt-5"
+    style="
+      background-image: url('assets/images/farm/sheep.jpg');
+      background-color: #cbcac5;
+    "
+  >
+    <div class="container" contentAnim aniName="fadeInUpShorter">
+      <h3 class="video-banner-title h1 text-white">
+        <span>Little</span><strong>Gosford<i>/</i> Farm</strong>
+      </h3>
+      <a
+        href="https://www.youtube.com/watch?v=F7EWw9SDbnM"
+        class="btn-video btn-iframe"
+        (click)="showVideoModal($event)"
+        ><i class="icon-play"></i
+      ></a>
     </div>
+  </div>
 
-    <div class="mb-5"></div>
-    
+  <div class="mb-5"></div>
 
-    <molla-blog-collection [posts]="posts" [loaded]="loaded"></molla-blog-collection>
-
-    <div class="mb-2"></div>
-
-
+  <div class="mb-2"></div>
 </main>

@@ -1,21 +1,32 @@
 <header class="header header-5">
-    <div class="sticky-wrapper" [style.height]="utilsService.isSticky? utilsService.stickyHeight + 'px' : '' ">
-        <div class="header-middle sticky-header" [class.fixed]="utilsService.isSticky">
-            <div class="container-fluid">
-                <div class="header-left">
-                    <molla-mobile-button></molla-mobile-button>
+  <div
+    class="sticky-wrapper"
+    [style.height]="
+      utilsService.isSticky ? utilsService.stickyHeight + 'px' : ''
+    "
+  >
+    <div
+      class="header-middle sticky-header"
+      [class.fixed]="utilsService.isSticky"
+    >
+      <div class="container-fluid">
+        <div class="header-left">
+          <molla-mobile-button></molla-mobile-button>
 
-                    <a routerLink="/" class="logo">
-                        <img src="assets/images/farm/logo.png" alt="Molla Logo" width="105" height="27">
-                    </a>
+          <a routerLink="/" class="logo">
+            <img
+              src="assets/images/farm/logo.png"
+              alt="Molla Logo"
+              width="105"
+              height="27"
+            />
+          </a>
 
-                    <molla-main-menu></molla-main-menu>
-                </div>
-
-                <div class="header-right">
-                    <molla-cart-menu></molla-cart-menu>
-                </div>
-            </div>
+          <molla-main-menu></molla-main-menu>
         </div>
+
+        <div class="header-right"></div>
+      </div>
     </div>
+  </div>
 </header>
